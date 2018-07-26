@@ -31,8 +31,13 @@ iframe.addEventListener('load', function (e) {
         // Add logout hook
         iframe.contentWindow.Guacamoly.Core.onLogout = function () {
             console.log('On logout');
+
+            delete localStorage.appOrigin;
+
             showWelcome();
         };
+
+        localStorage.appOrigin = iframe.src;
 
         showApp();
     } else {
@@ -51,4 +56,9 @@ document.getElementById('connectButton').addEventListener('click', function (e) 
     iframe.src = 'https://' + document.getElementById('serverUrl').value.replace(/^.*:\/\//, '');
 });
 
-showWelcome();
+if (localStorage.appOrigin) {
+    iframe.src = localStorage.appOrigin;
+} else {
+    showWelcome();
+}
+
