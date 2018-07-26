@@ -35,7 +35,6 @@
         <splash qualifier="port-xhdpi" src="res/screens/android/drawable-port-xhdpi-screen.png" />
         <splash qualifier="port-xxhdpi" src="res/screens/android/drawable-port-xxhdpi-screen.png" />
         <splash qualifier="port-xxxhdpi" src="res/screens/android/drawable-port-xxxhdpi-screen.png" />
-
         <allow-intent href="market:*" />
     </platform>
     <platform name="ios">
@@ -65,10 +64,8 @@
         <splash height="1024" platform="ios" src="res/screens/ios/Default-Portrait~ipad.png" width="768" />
         <splash height="960" platform="ios" src="res/screens/ios/Default@2x~iphone.png" width="640" />
         <splash height="480" platform="ios" src="res/screens/ios/Default~iphone.png" width="320" />
-
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-
     <engine name="android" spec="^7.0.0" />
 </widget>
