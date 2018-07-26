@@ -26,6 +26,8 @@ iframe.addEventListener('load', function (e) {
 
     if (iframe.contentWindow.origin !== 'null') {
 
+        if (!iframe.contentWindow.Guacamoly) return showError('No Meemo Instance detected');
+
         // Add logout hook
         iframe.contentWindow.Guacamoly.Core.onLogout = function () {
             console.log('On logout');
